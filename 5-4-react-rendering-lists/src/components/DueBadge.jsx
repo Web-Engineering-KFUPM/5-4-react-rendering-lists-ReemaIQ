@@ -24,7 +24,7 @@ export default function DueBadge({ dueDate }) {
         (d < 0) ? (label = "Overdue") :
             (d === 0) ? (label = "Due Today") :
                 (d === 1) ? (label = "1 day remaining") :
-                    (label = "${d} days remaining")
+                    (label = `${d} days remaining`)
     }
 
     return <span className={`badge ${d < 0 ? "danger" : d === 0 ? "warn" : ""}`}>{label}</span>;
